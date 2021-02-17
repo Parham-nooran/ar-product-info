@@ -21,8 +21,8 @@
 
          <!--a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="200 200 200" 
          position="0 0 0" rotation="45 90 45" scale="2 2 2" animation-mixer/-->
-         <!--a-camera id='camera1' look-controls-enabled='true'
-          arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader> </a-camera-->
+         <a-camera id='camera1' look-controls-enabled='true'
+          arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader> </a-camera>
          
 
          <a-entity  id="box-green" geometry="primitive: box" material="color: green"  rotation="0 180 0" scale="20 20 20"
@@ -31,7 +31,7 @@
          <a-entity id="sphere-purple" geometry="primitive: sphere" material="color: purple" 
          position="2 1 10" rotation="45 180 45" scale="1 1 1"/>
 
-         <a-camera gps-camera rotation-reader></a-camera>
+         <!--a-camera gps-camera rotation-reader></a-camera-->
          <!-- a-scence vr-mode-ui="enabled: false"
          embedded
          arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;
