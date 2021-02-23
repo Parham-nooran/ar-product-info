@@ -1,5 +1,10 @@
 window.onload = () =>{
-    
+    let camera = document.querySelector("a-camera");
+    const origin = {
+        lat: camera.getAttribute('gps-camera').simulateLatitude,
+        lang: camera.getAttribute('gps-camera').simulateLongitude
+    };
+
     let objects = getStaticObjects();
     
     renderPlaces(objects);
@@ -9,7 +14,7 @@ function getStaticObjects(){
     let objects = [];
     let n = 3;
     for(let i = 0;i<n;i++){
-        objects[i] = {name : 'Object'};
+        objects[i] = {name : 'Object'+i};
     }
     return objects;
 }
@@ -32,6 +37,7 @@ function renderPlaces(objects) {
         //let longitude = place.location.lng;
         let model = document.createElement('a-entity');
         setModelAttributes(model);
+        //model.setAttribute('gps-entity-place', ``);
         model.setAttribute('position', positions[count++]);
         model.setAttribute('id',count);
         //model.setAttribute('animation-mixer', '');
