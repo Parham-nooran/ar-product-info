@@ -1,10 +1,9 @@
 window.onload = () =>{
-    let camera = document.querySelector("a-camera");
+    /**let camera = document.querySelector("a-camera");
     const origin = {
         lat: camera.getAttribute('gps-camera').simulateLatitude,
         lang: camera.getAttribute('gps-camera').simulateLongitude
-    };
-
+    };*/
     let objects = getStaticObjects();
     
     renderPlaces(objects);
